@@ -34,10 +34,12 @@ A modern, responsive personal finance tracking application built with React and 
 ![Dashboard Dark](./screenshots/dashboard-dark.png)
 
 ### Transactions Page
-![Transactions](./screenshots/transactions.png)
+![Transactions](./screenshots/transactions-1.png)
+![Transactions](./screenshots/transactions-2.png)
 
 ### Categories Management
-![Categories](./screenshots/categories.png)
+![Categories](./screenshots/categories-1.png)
+![Categories](./screenshots/categories-2.png)
 
 ### Reports & Analytics
 ![Reports](./screenshots/reports.png)
