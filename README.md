@@ -28,24 +28,24 @@ A modern, responsive personal finance tracking application built with React and 
 ## 📱 Screenshots
 
 ### Dashboard (Light Theme)
-![Dashboard Light](./screenshots/dashboard-light.png)
+![Dashboard Light](./src/screenshots/dashboard-light.png)
 
 ### Dashboard (Dark Theme)
-![Dashboard Dark](./screenshots/dashboard-dark.png)
+![Dashboard Dark](./src/screenshots/dashboard-dark.png)
 
 ### Transactions Page
-![Transactions](./screenshots/transactions-1.png)
-![Transactions](./screenshots/transactions-2.png)
+![Transactions](./src/screenshots/transactions-1.png)
+![Transactions](./src/screenshots/transactions-2.png)
 
 ### Categories Management
-![Categories](./screenshots/categories-1.png)
-![Categories](./screenshots/categories-2.png)
+![Categories](./src/screenshots/categories-1.png)
+![Categories](./src/screenshots/categories-2.png)
 
 ### Reports & Analytics
-![Reports](./screenshots/reports.png)
+![Reports](./src/screenshots/reports.png)
 
 ### Settings Page
-![Settings](./screenshots/settings.png)
+![Settings](./src/screenshots/settings.png)
 
 ## 🛠️ Installation
 
