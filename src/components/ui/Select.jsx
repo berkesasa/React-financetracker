@@ -7,7 +7,7 @@ const Select = forwardRef(({
   help,
   required = false,
   options = [],
-  placeholder = 'Seçiniz...',
+  placeholder = 'Choose...',
   className = '',
   children,
   ...props 

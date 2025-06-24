@@ -56,11 +56,11 @@ function MonthlyTrendChart({ transactions }) {
     
     const income = monthTransactions
       .filter(t => t.type === 'income')
-      .reduce((sum, t) => sum + t.amount, 0);
+      .reduce((sum, t) => sum + Number(t.amount), 0);
     
     const expense = monthTransactions
       .filter(t => t.type === 'expense')
-      .reduce((sum, t) => sum + t.amount, 0);
+      .reduce((sum, t) => sum + Number(t.amount), 0);
     
     months.push({
       month: monthName,
@@ -173,7 +173,7 @@ export const IncomeExpenseChart = ({ data, title = "Gelir vs Gider" }) => {
 export const CategoryChart = ({ transactions, categories }) => {
   const categoryData = categories.map(category => {
     const categoryTransactions = transactions.filter(t => t.categoryId === category.id);
-    const total = categoryTransactions.reduce((sum, t) => sum + t.amount, 0);
+    const total = categoryTransactions.reduce((sum, t) => sum + Number(t.amount), 0);
     
     return {
       name: category.name,

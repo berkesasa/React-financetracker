@@ -30,11 +30,11 @@ const Reports = () => {
   
   const periodIncome = periodTransactions
     .filter(t => t.type === 'income')
-    .reduce((sum, t) => sum + t.amount, 0)
+    .reduce((sum, t) => sum + Number(t.amount), 0)
     
   const periodExpenses = periodTransactions
     .filter(t => t.type === 'expense')
-    .reduce((sum, t) => sum + t.amount, 0)
+    .reduce((sum, t) => sum + Number(t.amount), 0)
     
   const periodNet = periodIncome - periodExpenses
   
@@ -79,7 +79,7 @@ const Reports = () => {
   
   const categoryBreakdown = categories.map(category => {
     const categoryTransactions = periodTransactions.filter(t => t.categoryId === category.id && t.type === 'expense')
-    const total = categoryTransactions.reduce((sum, t) => sum + t.amount, 0)
+    const total = categoryTransactions.reduce((sum, t) => sum + Number(t.amount), 0)
     const percentage = periodExpenses > 0 ? (total / periodExpenses) * 100 : 0
     
     return {
@@ -108,11 +108,11 @@ const Reports = () => {
       
       const income = monthTransactions
         .filter(t => t.type === 'income')
-        .reduce((sum, t) => sum + t.amount, 0);
+        .reduce((sum, t) => sum + Number(t.amount), 0);
       
       const expenses = monthTransactions
         .filter(t => t.type === 'expense')
-        .reduce((sum, t) => sum + t.amount, 0);
+        .reduce((sum, t) => sum + Number(t.amount), 0);
       
       months.push({
         month: monthName,

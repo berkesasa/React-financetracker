@@ -25,11 +25,11 @@ export default function Dashboard() {
 
   const totalIncome = transactions
     .filter(t => t.type === 'income')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const totalExpense = transactions
     .filter(t => t.type === 'expense')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const balance = totalIncome - totalExpense;
 
@@ -50,19 +50,19 @@ export default function Dashboard() {
 
   const monthlyIncome = monthlyTransactions
     .filter(t => t.type === 'income')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const monthlyExpense = monthlyTransactions
     .filter(t => t.type === 'expense')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const lastMonthIncome = lastMonthTransactions
     .filter(t => t.type === 'income')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const lastMonthExpense = lastMonthTransactions
     .filter(t => t.type === 'expense')
-    .reduce((sum, t) => sum + t.amount, 0);
+    .reduce((sum, t) => sum + Number(t.amount), 0);
 
   const incomeChange = lastMonthIncome > 0 
     ? ((monthlyIncome - lastMonthIncome) / lastMonthIncome * 100).toFixed(1)
@@ -92,11 +92,11 @@ export default function Dashboard() {
       
       const income = monthTransactions
         .filter(t => t.type === 'income')
-        .reduce((sum, t) => sum + t.amount, 0);
+        .reduce((sum, t) => sum + Number(t.amount), 0);
       
       const expenses = monthTransactions
         .filter(t => t.type === 'expense')
-        .reduce((sum, t) => sum + t.amount, 0);
+        .reduce((sum, t) => sum + Number(t.amount), 0);
       
       months.push({
         month: monthName,
@@ -114,7 +114,7 @@ export default function Dashboard() {
       const categoryTransactions = transactions.filter(t => 
         t.categoryId === category.id && t.type === 'expense'
       );
-      const total = categoryTransactions.reduce((sum, t) => sum + t.amount, 0);
+      const total = categoryTransactions.reduce((sum, t) => sum + Number(t.amount), 0);
       return {
         name: category.name,
         value: total,
